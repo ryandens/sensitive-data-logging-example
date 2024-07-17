@@ -1,0 +1,3 @@
+codemods:
+  only:
+    - pixee:java/sensitive-data-logging
