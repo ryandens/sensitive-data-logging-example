@@ -28,7 +28,6 @@ public class UserProfileResource {
     final var username = securityContext.getUserPrincipal().getName();
     final var user = User.findByUsername(username);
     notifyUserIfPasswordIsCompromised(user);
-    logger.infof("user %s authenticated with password %s", user.username(), user.password());
     return new UserProfile(user.name(), user.username());
   }
 
